@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { studentMedia } from "@/lib/data";
 import { MediaItem } from "@/lib/types";
@@ -65,14 +66,28 @@ export default function MediaPage() {
     const allVideos = allMedia.filter(item => item.type === 'video');
     const allPhotos = allMedia.filter(item => item.type === 'photo');
     const t = useTranslations('MediaPage');
+    const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
+
 
     return (
         <div className="bg-background">
-            <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-card">
-                <div className="container mx-auto px-4 text-center">
+            <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 text-center">
+                 {heroImage && (
+                    <div className="absolute inset-0">
+                        <Image
+                            src={heroImage.imageUrl}
+                            alt={heroImage.description}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={heroImage.imageHint}
+                        />
+                        <div className="absolute inset-0 bg-black/60" />
+                    </div>
+                )}
+                <div className="container mx-auto px-4 text-center relative">
                   <AnimateOnScroll>
-                    <h1 className="text-4xl md:text-6xl font-bold font-headline text-foreground mb-4">{t('heroTitle')}</h1>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                    <h1 className="text-4xl md:text-6xl font-bold font-headline text-white mb-4">{t('heroTitle')}</h1>
+                    <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
                         {t('heroSubtitle')}
                     </p>
                   </AnimateOnScroll>
