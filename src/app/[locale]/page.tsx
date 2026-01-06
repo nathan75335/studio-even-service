@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -15,6 +17,8 @@ import { universitiesByField } from '@/lib/data';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { SuitcaseIcon } from '@/components/icons';
 import { useTranslations } from 'next-intl';
+import Autoplay from "embla-carousel-autoplay";
+import React from 'react';
 
 const featuredUniversities = [
   ...universitiesByField.medicine.universities.slice(0, 1),
@@ -28,6 +32,10 @@ export default function Home() {
   const videoPlaceholders = PlaceHolderImages.filter(p => p.id.startsWith('video-'));
   const t = useTranslations('HomePage');
   const tNav = useTranslations('Navbar');
+  
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
 
   return (
@@ -82,11 +90,14 @@ export default function Home() {
             </AnimateOnScroll>
             <AnimateOnScroll className="animation-delay-200">
               <Carousel
+                plugins={[plugin.current]}
                 opts={{
                   align: 'start',
                   loop: true,
                 }}
                 className="w-full"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
               >
                 <CarouselContent>
                   {videoPlaceholders.map((video, index) => (
