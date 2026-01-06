@@ -42,7 +42,7 @@ export function MediaModal({ children, mediaItem, image }: MediaModalProps) {
         </div>
         <DialogHeader className="p-6">
           <DialogTitle className="text-2xl font-headline">{mediaItem.description}</DialogTitle>
-          <DialogDescription>
+          <DialogDescription asChild>
             <div className="flex flex-wrap gap-2 mt-2">
                 {mediaItem.tags.map(tag => (
                     <Badge key={tag} variant="secondary">{tag}</Badge>
