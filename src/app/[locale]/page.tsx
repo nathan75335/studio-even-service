@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -18,7 +19,6 @@ import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { SuitcaseIcon } from '@/components/icons';
 import { useTranslations } from 'next-intl';
 import Autoplay from "embla-carousel-autoplay";
-import React from 'react';
 
 const featuredUniversities = [
   ...universitiesByField.medicine.universities.slice(0, 1),
@@ -37,22 +37,36 @@ export default function Home() {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 
-
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
         <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 text-center bg-card">
           <div className="absolute inset-0">
-            {heroImage && (
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                className="object-cover opacity-20"
-                priority
-                data-ai-hint={heroImage.imageHint}
-              />
-            )}
+             <Carousel
+                plugins={[plugin.current]}
+                opts={{
+                  align: 'start',
+                  loop: true,
+                }}
+                className="w-full h-full"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
+              >
+                <CarouselContent>
+                  {videoPlaceholders.map((video, index) => (
+                    <CarouselItem key={index}>
+                        <Image
+                          src={video.imageUrl}
+                          alt={video.description}
+                          fill
+                          className="object-cover opacity-20"
+                          priority={index === 0}
+                          data-ai-hint={video.imageHint}
+                        />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
              <div className="absolute inset-0 bg-background/80"></div>
           </div>
           <div className="container mx-auto px-4 relative">

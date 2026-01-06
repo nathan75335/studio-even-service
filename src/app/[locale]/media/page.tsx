@@ -1,15 +1,14 @@
-
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { studentMedia } from "@/lib/data";
-import { MediaItem } from "@/lib/types";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
-import { PlayCircle } from "lucide-react";
 import { MediaModal } from "@/components/media-modal";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { studentMedia } from "@/lib/data";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { MediaItem } from "@/lib/types";
+import { PlayCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { AnimateOnScroll } from "@/components/animate-on-scroll";
 
 const MediaGrid = ({ items }: { items: MediaItem[] }) => {
     return (

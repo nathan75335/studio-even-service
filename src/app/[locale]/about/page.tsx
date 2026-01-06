@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import { Award, Target, Users, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { useTranslations } from "next-intl";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function AboutPage() {
     const heroImage = PlaceHolderImages.find(p => p.id === 'about-us-hero');

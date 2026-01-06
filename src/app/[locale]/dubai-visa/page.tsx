@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plane, Briefcase, Clock, Calendar, ArrowRight } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { useTranslations } from "next-intl";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const iconMap: { [key: string]: React.ElementType } = {
   Plane,

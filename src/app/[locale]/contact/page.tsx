@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Phone, Mail, MapPin, Building } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
@@ -7,6 +6,7 @@ import { WhatsAppIcon } from "@/components/icons";
 import Link from "next/link";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { useTranslations } from "next-intl";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function ContactPage() {
     const heroImage = PlaceHolderImages.find(p => p.id === 'contact-hero');

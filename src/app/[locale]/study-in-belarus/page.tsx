@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { universitiesByField, requiredDocuments } from "@/lib/data";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -8,6 +7,7 @@ import Link from "next/link";
 import { CheckCircle, FileText } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { useTranslations } from "next-intl";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const AnimatedChecklist = ({ title, items }: { title: string, items: { item: string }[] }) => (
     <div className="bg-card p-6 rounded-lg shadow-md">
