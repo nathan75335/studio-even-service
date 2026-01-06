@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import {
   Select,
@@ -10,21 +10,23 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Globe } from "lucide-react";
+import { useTransition } from "react";
 
 export function LanguageSwitcher() {
   const router = useRouter();
-  const pathname = usePathname();
   const locale = useLocale();
+  const [isPending, startTransition] = useTransition();
+
 
   const handleChange = (newLocale: string) => {
-    // This regex will replace the current locale in the path with the new one.
-    // e.g., /en/about -> /fr/about
-    const newPath = pathname.replace(/^\/[a-z]{2}/, `/${newLocale}`);
-    router.replace(newPath);
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    startTransition(() => {
+        router.refresh();
+    });
   };
 
   return (
-    <Select value={locale} onValueChange={handleChange}>
+    <Select value={locale} onValueChange={handleChange} disabled={isPending}>
       <SelectTrigger className="w-auto border-none focus:ring-0 gap-2 text-muted-foreground hover:text-primary">
         <Globe className="w-5 h-5"/>
         <SelectValue placeholder="Language" />

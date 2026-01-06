@@ -54,9 +54,9 @@ export function Navbar() {
                                 href={item.href}
                                 className={cn(
                                     "text-sm font-medium transition-colors hover:text-primary relative",
-                                    pathname.endsWith(item.href) ? "text-primary" : "text-muted-foreground",
+                                    pathname === item.href ? "text-primary" : "text-muted-foreground",
                                     "after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-primary after:scale-x-0 after:transition-transform after:duration-300",
-                                    pathname.endsWith(item.href) ? "after:scale-x-100" : "hover:after:scale-x-50"
+                                    pathname === item.href ? "after:scale-x-100" : "hover:after:scale-x-50"
                                 )}
                             >
                                 {item.title}
