@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
 
 import { cn } from "@/lib/utils";
@@ -10,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { University } from "lucide-react";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { Link, usePathname } from '@/navigation';
 
 export function Navbar() {
     const pathname = usePathname();

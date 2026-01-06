@@ -29,7 +29,6 @@ const featuredUniversities = [
 ];
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
   const videoPlaceholders = PlaceHolderImages.filter(p => p.id.startsWith('video-'));
   const t = useTranslations('HomePage');
   const tNav = useTranslations('Navbar');

@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import {
   Select,
@@ -11,17 +10,19 @@ import {
 } from "@/components/ui/select";
 import { Globe } from "lucide-react";
 import { useTransition } from "react";
+import { useRouter, usePathname } from '@/navigation';
+
 
 export function LanguageSwitcher() {
   const router = useRouter();
+  const pathname = usePathname();
   const locale = useLocale();
   const [isPending, startTransition] = useTransition();
 
 
   const handleChange = (newLocale: string) => {
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
     startTransition(() => {
-        router.refresh();
+      router.replace(pathname, {locale: newLocale});
     });
   };
 

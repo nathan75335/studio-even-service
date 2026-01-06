@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { useTranslations } from 'next-intl';
 import {
     Sheet,
@@ -10,6 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, University } from "lucide-react";
+import { Link } from '@/navigation';
 
 export function MobileNav() {
     const [open, setOpen] = React.useState(false);

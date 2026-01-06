@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { WhatsAppIcon } from "@/components/icons";
 import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 
 export function Footer() {
     const t = useTranslations('Footer');
