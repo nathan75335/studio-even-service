@@ -8,12 +8,9 @@ import { cn } from '@/lib/utils';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: "Evan's Travel - Study in Belarus, Visa Assistance",
-  description: 'Your trusted partner for education and travel. We specialize in helping students study in Belarus and provide comprehensive visa services for Belarus and Dubai.',
-};
+// Note: Metadata is now in the root layout.tsx
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params: { locale }
 }: Readonly<{

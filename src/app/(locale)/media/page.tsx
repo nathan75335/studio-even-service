@@ -65,7 +65,7 @@ export default function MediaPage() {
     const allVideos = allMedia.filter(item => item.type === 'video');
     const allPhotos = allMedia.filter(item => item.type === 'photo');
     const t = useTranslations('MediaPage');
-    const heroImage = PlaceHolderImages.find(p => p.id === 'hero-home');
+    const heroImage = PlaceHolderImages.find(p => p.id === 'media-gallery-4');
 
 
     return (
