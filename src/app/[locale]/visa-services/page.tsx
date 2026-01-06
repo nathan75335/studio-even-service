@@ -4,9 +4,11 @@ import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { useTranslations } from "next-intl";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function VisaServicesPage() {
     const t = useTranslations('VisaServicesPage');
+    const heroImage = PlaceHolderImages.find(p => p.id === 'video-belarus-4');
     
     const belarusVisaSteps = [
         { step: 1, title: t('step1Title'), description: t('step1Desc') },
@@ -18,11 +20,23 @@ export default function VisaServicesPage() {
 
     return (
         <div>
-            <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 bg-primary/10 text-center">
+            <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 text-center">
+                {heroImage && (
+                    <div className="absolute inset-0">
+                        <Image
+                            src={heroImage.imageUrl}
+                            alt={heroImage.description}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={heroImage.imageHint}
+                        />
+                        <div className="absolute inset-0 bg-black/60" />
+                    </div>
+                )}
                 <div className="container mx-auto px-4 relative">
                     <AnimateOnScroll>
-                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-foreground mb-4">{t('heroTitle')}</h1>
-                        <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-white mb-4">{t('heroTitle')}</h1>
+                        <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
                             {t('heroSubtitle')}
                         </p>
                     </AnimateOnScroll>
