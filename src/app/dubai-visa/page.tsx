@@ -2,10 +2,10 @@ import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { dubaiVisaTypes } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plane, Briefcase, Clock, Calendar, ArrowRight } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { useTranslations } from "next-intl";
 
 const iconMap: { [key: string]: React.ElementType } = {
   Plane,
@@ -18,6 +18,15 @@ export default function DubaiVisaPage() {
     const heroImage = PlaceHolderImages.find(p => p.id === 'dubai-skyline');
     const travelImage1 = PlaceHolderImages.find(p => p.id === 'dubai-travel-1');
     const travelImage2 = PlaceHolderImages.find(p => p.id === 'dubai-travel-2');
+    const t = useTranslations('DubaiVisaPage');
+
+    const dubaiVisaTypes = [
+        { title: t('touristVisaTitle'), description: t('touristVisaDesc'), icon: 'Plane' },
+        { title: t('businessVisaTitle'), description: t('businessVisaDesc'), icon: 'Briefcase' },
+        { title: t('shortTermVisaTitle'), description: t('shortTermVisaDesc'), icon: 'Clock' },
+        { title: t('longTermVisaTitle'), description: t('longTermVisaDesc'), icon: 'Calendar' },
+    ];
+
 
     return (
         <div>
@@ -36,9 +45,9 @@ export default function DubaiVisaPage() {
                 )}
                 <div className="container mx-auto px-4 relative">
                     <AnimateOnScroll>
-                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-white mb-4">Dubai Visa Services</h1>
+                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-white mb-4">{t('heroTitle')}</h1>
                         <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-                            Fast, reliable, and hassle-free visa processing for your trip to Dubai, whether for tourism or business.
+                           {t('heroSubtitle')}
                         </p>
                     </AnimateOnScroll>
                 </div>
@@ -47,9 +56,9 @@ export default function DubaiVisaPage() {
             <section className="py-16 md:py-24 bg-background">
                 <div className="container mx-auto px-4">
                     <AnimateOnScroll>
-                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-headline">Visa Types We Offer</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-headline">{t('visaTypesTitle')}</h2>
                         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                            We provide a range of visa options to suit your travel needs. Our expert team ensures a smooth and efficient application process from start to finish.
+                            {t('visaTypesSubtitle')}
                         </p>
                     </AnimateOnScroll>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -79,27 +88,27 @@ export default function DubaiVisaPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                         <AnimateOnScroll>
-                            <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Why Choose Evan's Travel for Your Dubai Visa?</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">{t('whyChooseTitle')}</h2>
                             <ul className="space-y-4 text-muted-foreground text-lg">
                                 <li className="flex items-start gap-3">
                                     <ArrowRight className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                                    <span><strong>Expert Guidance:</strong> Our experienced team knows the ins and outs of the Dubai visa process.</span>
+                                    <span>{t('whyChoosePoint1')}</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <ArrowRight className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                                    <span><strong>Fast Processing:</strong> We prioritize your application to ensure the quickest possible turnaround time.</span>
+                                    <span>{t('whyChoosePoint2')}</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <ArrowRight className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                                    <span><strong>High Success Rate:</strong> Our meticulous approach minimizes errors and maximizes your chances of approval.</span>
+                                    <span>{t('whyChoosePoint3')}</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <ArrowRight className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                                    <span><strong>Dedicated Support:</strong> We provide support and answer all your questions throughout the process.</span>
+                                    <span>{t('whyChoosePoint4')}</span>
                                 </li>
                             </ul>
                             <Button asChild size="lg" className="mt-8">
-                                <Link href="/contact">Apply for Dubai Visa</Link>
+                                <Link href="/contact">{t('applyButton')}</Link>
                             </Button>
                         </AnimateOnScroll>
                         <AnimateOnScroll className="animation-delay-200">

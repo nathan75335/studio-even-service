@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
+import { useTranslations } from 'next-intl';
 
 import { Button } from "@/components/ui/button"
 import {
@@ -37,6 +38,7 @@ const formSchema = z.object({
 export function ContactForm() {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const t = useTranslations('ContactPage');
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -56,8 +58,8 @@ export function ContactForm() {
     setTimeout(() => {
         setIsLoading(false);
         toast({
-          title: "Message Sent!",
-          description: "Thank you for contacting us. We will get back to you shortly.",
+          title: t('toastSuccessTitle'),
+          description: t('toastSuccessDescription'),
         });
         form.reset();
     }, 1500);
@@ -72,9 +74,9 @@ export function ContactForm() {
             name="name"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel>{t('formName')}</FormLabel>
                 <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder={t('formNamePlaceholder')} {...field} />
                 </FormControl>
                 <FormMessage />
                 </FormItem>
@@ -85,9 +87,9 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
                 <FormItem>
-                <FormLabel>Email Address</FormLabel>
+                <FormLabel>{t('formEmail')}</FormLabel>
                 <FormControl>
-                    <Input placeholder="you@example.com" {...field} />
+                    <Input placeholder={t('formEmailPlaceholder')} {...field} />
                 </FormControl>
                 <FormMessage />
                 </FormItem>
@@ -99,9 +101,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>{t('formSubject')}</FormLabel>
               <FormControl>
-                <Input placeholder="e.g., Inquiry about Medical Studies" {...field} />
+                <Input placeholder={t('formSubjectPlaceholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -112,9 +114,9 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>{t('formMessage')}</FormLabel>
               <FormControl>
-                <Textarea placeholder="Tell us how we can help you" {...field} rows={5} />
+                <Textarea placeholder={t('formMessagePlaceholder')} {...field} rows={5} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -122,7 +124,7 @@ export function ContactForm() {
         />
         <Button type="submit" disabled={isLoading} className="w-full md:w-auto">
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isLoading ? "Sending..." : "Submit Message"}
+            {isLoading ? t('formSubmitting') : t('formSubmit')}
         </Button>
       </form>
     </Form>

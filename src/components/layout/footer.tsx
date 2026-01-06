@@ -1,24 +1,28 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { WhatsAppIcon } from "@/components/icons";
-
-const quickLinks = [
-    { href: '/study-in-belarus', label: 'Study in Belarus' },
-    { href: '/visa-services', label: 'Belarus Visa' },
-    { href: '/dubai-visa', label: 'Dubai Visa' },
-    { href: '/media', label: 'Media' },
-    { href: '/about', label: 'About Us' },
-    { href: '/contact', label: 'Contact' },
-];
+import { useTranslations } from 'next-intl';
 
 export function Footer() {
+    const t = useTranslations('Footer');
+    const tNav = useTranslations('Navbar');
+
+    const quickLinks = [
+        { href: '/study-in-belarus', label: tNav('studyInBelarus') },
+        { href: '/visa-services', label: tNav('visaServices') },
+        { href: '/dubai-visa', label: tNav('dubaiVisa') },
+        { href: '/media', label: tNav('media') },
+        { href: '/about', label: tNav('about') },
+        { href: '/contact', label: tNav('contact') },
+    ];
+
     return (
         <footer className="bg-card border-t">
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="space-y-4">
                         <h3 className="text-xl font-bold font-headline">Evan's Travel</h3>
-                        <p className="text-muted-foreground">Your trusted partner for education and travel consultancy. We turn your study abroad dreams into reality.</p>
+                        <p className="text-muted-foreground">{t('tagline')}</p>
                         <div className="flex space-x-4">
                            <a href="https://wa.me/375257458438" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                                 <WhatsAppIcon className="w-6 h-6" />
@@ -27,7 +31,7 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-semibold text-lg mb-4 font-headline">Quick Links</h4>
+                        <h4 className="font-semibold text-lg mb-4 font-headline">{t('quickLinks')}</h4>
                         <ul className="space-y-2">
                             {quickLinks.map(link => (
                                 <li key={link.href}>
@@ -40,7 +44,7 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-semibold text-lg mb-4 font-headline">Contact Us</h4>
+                        <h4 className="font-semibold text-lg mb-4 font-headline">{t('contactUs')}</h4>
                         <ul className="space-y-3 text-muted-foreground">
                             <li className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-primary" />
@@ -58,14 +62,14 @@ export function Footer() {
                     </div>
                     
                     <div>
-                        <h4 className="font-semibold text-lg mb-4 font-headline">Our Mission</h4>
-                        <p className="text-muted-foreground">To provide seamless and reliable assistance for students aspiring to study in Belarus, ensuring a smooth journey from application to arrival.</p>
+                        <h4 className="font-semibold text-lg mb-4 font-headline">{t('mission')}</h4>
+                        <p className="text-muted-foreground">{t('missionText')}</p>
                     </div>
 
                 </div>
 
                 <div className="mt-12 border-t pt-8 text-center text-muted-foreground">
-                    <p>&copy; {new Date().getFullYear()} Evan's Travel. All rights reserved.</p>
+                    <p>{t('copyright', { year: new Date().getFullYear() })}</p>
                 </div>
             </div>
         </footer>

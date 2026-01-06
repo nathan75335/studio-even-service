@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { CheckCircle, FileText } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { useTranslations } from "next-intl";
 
 const AnimatedChecklist = ({ title, items }: { title: string, items: { item: string }[] }) => (
     <div className="bg-card p-6 rounded-lg shadow-md">
@@ -24,15 +25,16 @@ const AnimatedChecklist = ({ title, items }: { title: string, items: { item: str
 
 export default function StudyInBelarusPage() {
     const fields = Object.values(universitiesByField);
+    const t = useTranslations('StudyBelarusPage');
 
     return (
         <div>
             <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-card">
                 <div className="container mx-auto px-4 text-center">
                     <AnimateOnScroll>
-                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-foreground mb-4">Study in Belarus</h1>
+                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-foreground mb-4">{t('heroTitle')}</h1>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Explore top-tier universities across various fields and start your journey towards a world-class education in the heart of Europe.
+                            {t('heroSubtitle')}
                         </p>
                     </AnimateOnScroll>
                 </div>
@@ -79,7 +81,7 @@ export default function StudyInBelarusPage() {
                                                     </CardContent>
                                                     <CardFooter className="p-4 pt-0">
                                                         <Button asChild variant="outline" size="sm">
-                                                          <Link href="/contact">Inquire Now</Link>
+                                                          <Link href="/contact">{t('inquireNow')}</Link>
                                                         </Button>
                                                     </CardFooter>
                                                 </Card>
@@ -96,14 +98,14 @@ export default function StudyInBelarusPage() {
             <section id="required-documents" className="py-16 md:py-24 bg-card">
                  <div className="container mx-auto px-4">
                     <AnimateOnScroll>
-                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-headline">Required Documents</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-headline">{t('documentsTitle')}</h2>
                     </AnimateOnScroll>
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         <AnimateOnScroll>
-                           <AnimatedChecklist title="For Admission" items={requiredDocuments.admission} />
+                           <AnimatedChecklist title={t('admissionDocsTitle')} items={requiredDocuments.admission} />
                         </AnimateOnScroll>
                         <AnimateOnScroll className="animation-delay-200">
-                           <AnimatedChecklist title="For Visa" items={requiredDocuments.visa} />
+                           <AnimatedChecklist title={t('visaDocsTitle')} items={requiredDocuments.visa} />
                         </AnimateOnScroll>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 import {
     Sheet,
     SheetContent,
@@ -10,17 +11,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { Menu, University } from "lucide-react";
 
-const mainNav = [
-    { title: "Study in Belarus", href: "/study-in-belarus" },
-    { title: "Media", href: "/media" },
-    { title: "Visa Services", href: "/visa-services" },
-    { title: "Dubai Visa", href: "/dubai-visa" },
-    { title: "About", href: "/about" },
-    { title: "Contact", href: "/contact" },
-];
-
 export function MobileNav() {
     const [open, setOpen] = React.useState(false);
+    const t = useTranslations('Navbar');
+    
+    const mainNav = [
+        { title: t('studyInBelarus'), href: "/study-in-belarus" },
+        { title: t('media'), href: "/media" },
+        { title: t('visaServices'), href: "/visa-services" },
+        { title: t('dubaiVisa'), href: "/dubai-visa" },
+        { title: t('about'), href: "/about" },
+        { title: t('contact'), href: "/contact" },
+    ];
+
 
     return (
         <Sheet open={open} onOpenChange={setOpen}>
@@ -50,7 +53,7 @@ export function MobileNav() {
                     </nav>
                     <div className="mt-auto">
                         <Button asChild className="w-full">
-                            <Link href="/contact" onClick={() => setOpen(false)}>Apply Now</Link>
+                            <Link href="/contact" onClick={() => setOpen(false)}>{t('applyNow')}</Link>
                         </Button>
                     </div>
                 </div>

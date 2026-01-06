@@ -8,6 +8,7 @@ import { MediaModal } from "@/components/media-modal";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { useTranslations } from "next-intl";
 
 const MediaGrid = ({ items }: { items: MediaItem[] }) => {
     return (
@@ -63,15 +64,16 @@ export default function MediaPage() {
 
     const allVideos = allMedia.filter(item => item.type === 'video');
     const allPhotos = allMedia.filter(item => item.type === 'photo');
+    const t = useTranslations('MediaPage');
 
     return (
         <div className="bg-background">
             <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-card">
                 <div className="container mx-auto px-4 text-center">
                   <AnimateOnScroll>
-                    <h1 className="text-4xl md:text-6xl font-bold font-headline text-foreground mb-4">Our Students &amp; Universities</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold font-headline text-foreground mb-4">{t('heroTitle')}</h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                        A glimpse into the vibrant life of our students and the prestigious campuses they call home.
+                        {t('heroSubtitle')}
                     </p>
                   </AnimateOnScroll>
                 </div>
@@ -81,10 +83,10 @@ export default function MediaPage() {
                 <Tabs defaultValue="all" className="w-full">
                     <AnimateOnScroll>
                         <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 md:w-fit mx-auto h-auto md:h-10">
-                            <TabsTrigger value="all">All Media</TabsTrigger>
-                            <TabsTrigger value="photos">Photo Gallery</TabsTrigger>
-                            <TabsTrigger value="videos">Video Gallery</TabsTrigger>
-                            <TabsTrigger value="testimonials">Testimonials</TabsTrigger>
+                            <TabsTrigger value="all">{t('tabAll')}</TabsTrigger>
+                            <TabsTrigger value="photos">{t('tabPhotos')}</TabsTrigger>
+                            <TabsTrigger value="videos">{t('tabVideos')}</TabsTrigger>
+                            <TabsTrigger value="testimonials">{t('tabTestimonials')}</TabsTrigger>
                         </TabsList>
                     </AnimateOnScroll>
                     

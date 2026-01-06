@@ -3,24 +3,27 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from 'next-intl';
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { University } from "lucide-react";
-
-const mainNav = [
-    { title: "Study in Belarus", href: "/study-in-belarus" },
-    { title: "Media", href: "/media" },
-    { title: "Visa Services", href: "/visa-services" },
-    { title: "Dubai Visa", href: "/dubai-visa" },
-    { title: "About", href: "/about" },
-    { title: "Contact", href: "/contact" },
-];
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function Navbar() {
     const pathname = usePathname();
     const [isScrolled, setIsScrolled] = React.useState(false);
+    const t = useTranslations('Navbar');
+
+    const mainNav = [
+        { title: t('studyInBelarus'), href: "/study-in-belarus" },
+        { title: t('media'), href: "/media" },
+        { title: t('visaServices'), href: "/visa-services" },
+        { title: t('dubaiVisa'), href: "/dubai-visa" },
+        { title: t('about'), href: "/about" },
+        { title: t('contact'), href: "/contact" },
+    ];
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -51,9 +54,9 @@ export function Navbar() {
                                 href={item.href}
                                 className={cn(
                                     "text-sm font-medium transition-colors hover:text-primary relative",
-                                    pathname === item.href ? "text-primary" : "text-muted-foreground",
+                                    pathname.endsWith(item.href) ? "text-primary" : "text-muted-foreground",
                                     "after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-primary after:scale-x-0 after:transition-transform after:duration-300",
-                                    pathname === item.href ? "after:scale-x-100" : "hover:after:scale-x-50"
+                                    pathname.endsWith(item.href) ? "after:scale-x-100" : "hover:after:scale-x-50"
                                 )}
                             >
                                 {item.title}
@@ -61,9 +64,10 @@ export function Navbar() {
                         ))}
                     </nav>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
+                        <LanguageSwitcher />
                         <Button asChild className="hidden md:flex">
-                            <Link href="/contact">Apply Now</Link>
+                            <Link href="/contact">{t('applyNow')}</Link>
                         </Button>
                         <MobileNav />
                     </div>

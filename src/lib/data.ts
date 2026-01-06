@@ -59,19 +59,21 @@ export const requiredDocuments: { admission: DocumentItem[], visa: DocumentItem[
     ]
 };
 
-export const belarusVisaSteps: VisaStep[] = [
-    { step: 1, title: 'Admission', description: 'Secure an admission letter from your chosen university with our assistance.' },
-    { step: 2, title: 'Invitation', description: 'Receive an official invitation letter from the university, required for the visa application.' },
-    { step: 3, title: 'Embassy Submission', description: 'We guide you in preparing and submitting your documents to the Belarusian embassy.' },
-    { step: 4, title: 'Visa Approval', description: 'Receive your student visa and prepare for your journey to Belarus.' },
-];
+// This data is now translated in the JSON files
+// export const belarusVisaSteps: VisaStep[] = [
+//     { step: 1, title: 'Admission', description: 'Secure an admission letter from your chosen university with our assistance.' },
+//     { step: 2, title: 'Invitation', description: 'Receive an official invitation letter from the university, required for the visa application.' },
+//     { step: 3, title: 'Embassy Submission', description: 'We guide you in preparing and submitting your documents to the Belarusian embassy.' },
+//     { step: 4, title: 'Visa Approval', description: 'Receive your student visa and prepare for your journey to Belarus.' },
+// ];
 
-export const dubaiVisaTypes: DubaiVisaType[] = [
-    { title: 'Tourist Visa', description: 'Explore the wonders of Dubai. Available for 30 or 60 days, single or multiple entry.', icon: 'Plane' },
-    { title: 'Business Visa', description: 'For professionals attending meetings, conferences, or exploring business opportunities.', icon: 'Briefcase' },
-    { title: 'Short-Term Visa', description: 'Ideal for short stays, family visits, or transit passengers. Valid for up to 30 days.', icon: 'Clock' },
-    { title: 'Long-Term Visa', description: 'For extended stays, remote work, or long-term projects in Dubai.', icon: 'Calendar' },
-];
+// This data is now translated in the JSON files
+// export const dubaiVisaTypes: DubaiVisaType[] = [
+//     { title: 'Tourist Visa', description: 'Explore the wonders of Dubai. Available for 30 or 60 days, single or multiple entry.', icon: 'Plane' },
+//     { title: 'Business Visa', description: 'For professionals attending meetings, conferences, or exploring business opportunities.', icon: 'Briefcase' },
+//     { title: 'Short-Term Visa', description: 'Ideal for short stays, family visits, or transit passengers. Valid for up to 30 days.', icon: 'Clock' },
+//     { title: 'Long-Term Visa', description: 'For extended stays, remote work, or long-term projects in Dubai.', icon: 'Calendar' },
+// ];
 
 export const studentMedia = {
     testimonials: [

@@ -1,19 +1,29 @@
 import Image from "next/image";
-import { belarusVisaSteps } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import { useTranslations } from "next-intl";
 
 export default function VisaServicesPage() {
+    const t = useTranslations('VisaServicesPage');
+    
+    const belarusVisaSteps = [
+        { step: 1, title: t('step1Title'), description: t('step1Desc') },
+        { step: 2, title: t('step2Title'), description: t('step2Desc') },
+        { step: 3, title: t('step3Title'), description: t('step3Desc') },
+        { step: 4, title: t('step4Title'), description: t('step4Desc') },
+    ];
+
+
     return (
         <div>
             <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 bg-primary/10 text-center">
                 <div className="container mx-auto px-4 relative">
                     <AnimateOnScroll>
-                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-foreground mb-4">Belarus Student Visa</h1>
+                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-foreground mb-4">{t('heroTitle')}</h1>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                            A clear and streamlined process to secure your student visa. Let us guide you every step of the way.
+                            {t('heroSubtitle')}
                         </p>
                     </AnimateOnScroll>
                 </div>
@@ -22,7 +32,7 @@ export default function VisaServicesPage() {
             <section className="py-16 md:py-24 bg-background">
                 <div className="container mx-auto px-4">
                     <AnimateOnScroll>
-                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-headline">Your Visa Journey in 4 Simple Steps</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-headline">{t('journeyTitle')}</h2>
                     </AnimateOnScroll>
                     
                     <div className="relative max-w-4xl mx-auto">
@@ -67,23 +77,23 @@ export default function VisaServicesPage() {
                             />
                         </AnimateOnScroll>
                         <AnimateOnScroll className="animation-delay-200">
-                             <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Why Trust Us With Your Visa?</h2>
+                             <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">{t('whyTrustTitle')}</h2>
                             <ul className="space-y-4 text-muted-foreground text-lg">
                                 <li className="flex items-start gap-3">
                                     <ArrowRight className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                                    <span><strong>Up-to-date Information:</strong> We stay current with the latest embassy requirements and procedures.</span>
+                                    <span>{t('whyTrustPoint1')}</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <ArrowRight className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                                    <span><strong>Document Verification:</strong> We meticulously check all documents to prevent common errors and delays.</span>
+                                    <span>{t('whyTrustPoint2')}</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <ArrowRight className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                                    <span><strong>Full Support:</strong> From filling forms to preparing for the interview, we're with you all the way.</span>
+                                    <span>{t('whyTrustPoint3')}</span>
                                 </li>
                             </ul>
                             <Button asChild size="lg" className="mt-8">
-                                <Link href="/contact">Start Your Application</Link>
+                                <Link href="/contact">{t('startButton')}</Link>
                             </Button>
                         </AnimateOnScroll>
                     </div>
