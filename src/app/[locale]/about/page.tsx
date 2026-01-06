@@ -29,13 +29,13 @@ export default function AboutPage() {
                             className="object-cover"
                             data-ai-hint={heroImage.imageHint}
                         />
-                        <div className="absolute inset-0 bg-primary/80" />
+                        <div className="absolute inset-0 bg-black/60" />
                     </div>
                 )}
                 <div className="container mx-auto px-4 relative">
                     <AnimateOnScroll>
-                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-primary-foreground mb-4">{t('heroTitle')}</h1>
-                        <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
+                        <h1 className="text-4xl md:text-6xl font-bold font-headline text-white mb-4">{t('heroTitle')}</h1>
+                        <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
                            {t('heroSubtitle')}
                         </p>
                     </AnimateOnScroll>

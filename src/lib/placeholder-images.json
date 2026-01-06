@@ -7,28 +7,28 @@
       "imageHint": "students campus"
     },
     {
-      "id": "video-travel",
-      "description": "Students Traveling",
-      "imageUrl": "https://images.unsplash.com/photo-1763730727796-3b1ba3a61ade?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHVkZW50cyUyMHRyYXZlbHxlbnwwfHx8fDE3Njc3MzczNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "students travel"
+      "id": "video-belarus-1",
+      "description": "Cityscape of Minsk, Belarus",
+      "imageUrl": "https://images.unsplash.com/photo-1751397680600-c50183b6b346?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxNaW5zayUyMGNpdHlzY2FwZXxlbnwwfHx8fDE3Njc3Mzg4MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Minsk cityscape"
     },
     {
-      "id": "video-arrival",
-      "description": "Airport Arrival",
-      "imageUrl": "https://images.unsplash.com/photo-1708275771888-c4e72cf8fa75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhaXJwb3J0JTIwYXJyaXZhbHxlbnwwfHx8fDE3Njc3MzczNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "airport arrival"
+      "id": "video-belarus-2",
+      "description": "Student life in Belarus",
+      "imageUrl": "https://images.unsplash.com/photo-1601921202654-f64caf8dc263?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHVkZW50cyUyMEJlbGFydXN8ZW58MHx8fHwxNzY3NzM4ODIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "students Belarus"
     },
     {
-      "id": "video-city",
-      "description": "Belarus City Views",
-      "imageUrl": "https://images.unsplash.com/photo-1759255261348-9414ee167cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaXR5c2NhcGUlMjB2aWV3fGVufDB8fHx8MTc2NzY0MjQ1NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cityscape view"
+      "id": "video-belarus-3",
+      "description": "University campus in Belarus",
+      "imageUrl": "https://images.unsplash.com/photo-1670232788578-bb01845f36e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx1bml2ZXJzaXR5JTIwQmVsYXJ1c3xlbnwwfHx8fDE3Njc3Mzg4MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university Belarus"
     },
     {
-      "id": "video-campus",
-      "description": "University Campuses",
-      "imageUrl": "https://images.unsplash.com/photo-1689686610856-3bcf921eb1f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDB8fHx8MTc2NzY2OTQ5MXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "university campus"
+      "id": "video-belarus-4",
+      "description": "Exploring Belarusian culture",
+      "imageUrl": "https://images.unsplash.com/photo-1626004612293-aba49ae24964?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxCZWxhcnVzJTIwY3VsdHVyZXxlbnwwfHx8fDE3Njc3Mzg4MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Belarus culture"
     },
     {
       "id": "bsmu-main",

@@ -34,7 +34,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
         <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 text-center bg-card">
-          <div className="absolute inset-0 bg-primary/10">
+          <div className="absolute inset-0">
             {heroImage && (
               <Image
                 src={heroImage.imageUrl}
@@ -45,6 +45,7 @@ export default function Home() {
                 data-ai-hint={heroImage.imageHint}
               />
             )}
+             <div className="absolute inset-0 bg-background/80"></div>
           </div>
           <div className="container mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto">
