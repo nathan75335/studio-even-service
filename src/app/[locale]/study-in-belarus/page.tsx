@@ -14,7 +14,7 @@ const AnimatedChecklist = ({ title, items }: { title: string, items: { item: str
         <h3 className="text-xl font-bold font-headline mb-4 flex items-center"><FileText className="w-5 h-5 mr-2 text-primary"/>{title}</h3>
         <ul className="space-y-3">
             {items.map((doc, index) => (
-                <li key={index} className="flex items-start gap-3 transition-opacity duration-300 opacity-0 animate-fade-in-up" style={{ animationDelay: `${index * 100}ms`}}>
+                <li key={index} className="flex items-start gap-3 " style={{ animationDelay: `${index * 100}ms`}}>
                     <CheckCircle className="w-5 h-5 text-green-500 mt-1 shrink-0" />
                     <span>{doc.item}</span>
                 </li>
