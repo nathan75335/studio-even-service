@@ -1,10 +1,16 @@
 services:
   nextn:
-    image: nextn
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: production
+    image: perfecttracking/evanstravel:latest
     ports:
       - 3000:3000
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"     # HTTP
+      - "443:443"   # HTTPS if needed
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/certs:/etc/nginx/certs:ro  # optional for SSL
+    depends_on:
+      - nextn
+    restart: always
