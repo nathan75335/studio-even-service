@@ -1,0 +1,105 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/chunks/app/_not-found/page-f70dd65b6977e37a.js"
+    ],
+    "/[locale]/layout": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/css/1db896ff9ecf174e.css",
+      "static/chunks/306-fb590ad996fb0de3.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/383-efce75d5362ecb3e.js",
+      "static/chunks/604-b9152dba7fabf9fd.js",
+      "static/chunks/202-8667848dbde030e8.js",
+      "static/chunks/85-1948321d6c84af63.js",
+      "static/chunks/119-2f546a019a0d1cf1.js",
+      "static/chunks/app/[locale]/layout-36988d791a5afe31.js"
+    ],
+    "/[locale]/about/page": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/chunks/306-fb590ad996fb0de3.js",
+      "static/chunks/356-5cad24532f4c0e5d.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/app/[locale]/about/page-22c4e784244b2331.js"
+    ],
+    "/[locale]/contact/page": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/chunks/306-fb590ad996fb0de3.js",
+      "static/chunks/356-5cad24532f4c0e5d.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/383-efce75d5362ecb3e.js",
+      "static/chunks/604-b9152dba7fabf9fd.js",
+      "static/chunks/985-721ffc8300e52da2.js",
+      "static/chunks/app/[locale]/contact/page-4c7e33659edea7f1.js"
+    ],
+    "/[locale]/dubai-visa/page": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/chunks/306-fb590ad996fb0de3.js",
+      "static/chunks/356-5cad24532f4c0e5d.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/app/[locale]/dubai-visa/page-22c4e784244b2331.js"
+    ],
+    "/[locale]/media/page": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/chunks/306-fb590ad996fb0de3.js",
+      "static/chunks/356-5cad24532f4c0e5d.js",
+      "static/chunks/383-efce75d5362ecb3e.js",
+      "static/chunks/202-8667848dbde030e8.js",
+      "static/chunks/85-1948321d6c84af63.js",
+      "static/chunks/app/[locale]/media/page-e8f37093eb5bece3.js"
+    ],
+    "/[locale]/page": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/chunks/306-fb590ad996fb0de3.js",
+      "static/chunks/356-5cad24532f4c0e5d.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/383-efce75d5362ecb3e.js",
+      "static/chunks/604-b9152dba7fabf9fd.js",
+      "static/chunks/662-caf70d531d478bd0.js",
+      "static/chunks/app/[locale]/page-7c0d4e72173fc162.js"
+    ],
+    "/[locale]/study-in-belarus/page": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/chunks/306-fb590ad996fb0de3.js",
+      "static/chunks/356-5cad24532f4c0e5d.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/202-8667848dbde030e8.js",
+      "static/chunks/app/[locale]/study-in-belarus/page-756237b7dd38809c.js"
+    ],
+    "/[locale]/visa-services/page": [
+      "static/chunks/webpack-0f883c56f1ceadc0.js",
+      "static/chunks/4bd1b696-21f374d1156f834a.js",
+      "static/chunks/255-99e1d6b668e20fa1.js",
+      "static/chunks/main-app-e70d8ed9bf90d6f9.js",
+      "static/chunks/306-fb590ad996fb0de3.js",
+      "static/chunks/356-5cad24532f4c0e5d.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/app/[locale]/visa-services/page-22c4e784244b2331.js"
+    ]
+  }
+}

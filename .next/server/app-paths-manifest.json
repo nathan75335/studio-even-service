@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js",
+  "/[locale]/dubai-visa/page": "app/[locale]/dubai-visa/page.js",
+  "/[locale]/media/page": "app/[locale]/media/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/study-in-belarus/page": "app/[locale]/study-in-belarus/page.js",
+  "/[locale]/visa-services/page": "app/[locale]/visa-services/page.js"
+}

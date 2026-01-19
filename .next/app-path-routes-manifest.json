@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/[locale]/about/page": "/[locale]/about",
+  "/[locale]/contact/page": "/[locale]/contact",
+  "/[locale]/dubai-visa/page": "/[locale]/dubai-visa",
+  "/[locale]/media/page": "/[locale]/media",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/study-in-belarus/page": "/[locale]/study-in-belarus",
+  "/[locale]/visa-services/page": "/[locale]/visa-services"
+}
